@@ -1,0 +1,45 @@
+{
+  "name": "retire-this-session",
+  "version": "0.1.0",
+  "description": "Retire a DSH session and its fork/subagent tree: archive now, move the logs into the Session-Time-Vault at the next start.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "plan.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "assets/"
+  ],
+  "engines": {
+    "node": ">=20.11",
+    "dsh": ">=0.2.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "archive",
+    "retirement"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-krzeminski/retire-this-session.git"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

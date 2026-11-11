@@ -1,0 +1,7 @@
+# The configuration layer this bundle contributes when a profile lists it.
+# Override the row from the profile's own cordis.patch.yml to point the queue or
+# the vault elsewhere; every field has a default derived from $DSH_HOME.
+- insert:
+    - id: session-retirement
+      # Must be the package name — the loader imports this specifier.
+      name: "retire-this-session"
